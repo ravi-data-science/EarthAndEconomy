@@ -23,7 +23,7 @@ if __name__=='__main__':
     print("in main")
 
     cla1 = MyClass1()
-    #print(cla1)
+    #print(cla1)    
     #print(cla1.m1(20))
 
     p = Person('Nikhil')

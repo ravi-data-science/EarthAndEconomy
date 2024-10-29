@@ -48,4 +48,7 @@ if __name__ == '__main__':
         lines = file_object.readlines()
         for line in lines:
             print(line)    
-      
+
+    filename = 'journal.txt'
+    with open(filename, 'w') as file_object:
+        file_object.write("I love programming.")  
