@@ -42,7 +42,16 @@ def topKFrequent_1(nums: List[int], k: int) -> List[int]:
              print(val)
 """
 
+def topKFrequent_ravi(nums: List[int], k: int) -> List[int]:
+        map_elements = {}
+        for index,val in enumerate(nums):
+            map_elements[val] = map_elements.get(val,0) + 1
+
+        return sorted(map_elements[0:k-1]) 
+
 if __name__=='__main__':
     print("::")
     nums = [4,5,7,8,6,3,2,4,7,8,8] 
     print(topKFrequent(nums,3))        
+
+    print(topKFrequent_ravi(nums,3))        

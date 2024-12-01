@@ -45,7 +45,7 @@ def twoSum(nums: List[int], target: int) -> List[int]:
             prevMap[n] = i
             print(prevMap)
 
-def getConcatenation(nums: List[int]) -> List[int]:
+def getConcatenation(self, nums: List[int]) -> List[int]:
         result = []
         for num in nums:
             result.append(num)  # Add each element from nums
@@ -53,7 +53,7 @@ def getConcatenation(nums: List[int]) -> List[int]:
             result.append(num)  # Add each element again
         return result
 
-def getConcatenation1(nums: List[int]) -> List[int]:
+def getConcatenation1(self, nums: List[int]) -> List[int]:
         n = len(nums)
         result = [0] * (2 * n)  # Create a new list of size 2n
         for i in range(n):
@@ -61,11 +61,11 @@ def getConcatenation1(nums: List[int]) -> List[int]:
             result[i + n] = nums[i]  # Copy the second part
         return result
 
-def getConcatenation2(nums: List[int]) -> List[int]:
+def getConcatenation2(self, nums: List[int]) -> List[int]:
         nums.extend(nums)  # Extend the list with itself
         return nums
 
-def getConcatenation3(nums: List[int]) -> List[int]:
+def getConcatenation3(self, nums: List[int]) -> List[int]:
         return nums + nums  # Concatenate the list with itself
 
 if __name__=='__main__':
@@ -82,13 +82,7 @@ if __name__=='__main__':
     print("\ntwo sum")
     lst_ints = [5,7,6,10,5]
     print(twoSum(lst_ints, 10))     
-
-    #concatenate lists
-    print("\n concatenate lists::")
-    print(getConcatenation(lst_ints)) 
-    print(getConcatenation1(lst_ints)) 
-    print(getConcatenation2(lst_ints)) 
-    print(getConcatenation3(lst_ints)) 
+    
 
 
 

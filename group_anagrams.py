@@ -5,14 +5,14 @@ from typing import List
 
 
 def groupAnagrams(strs: List[str]) -> List[List[str]]:
-        ans = defaultdict(list)
+        lst_group_anagrams = defaultdict(list)
 
         for s in strs:
-            count = [0] * 26
+            lst_alphabet_pos_num = [0] * 26
             for c in s:
-                count[ord(c) - ord("a")] += 1 # ord gets the asscii value
-            ans[tuple(count)].append(s)
-        return ans.values()
+                lst_alphabet_pos_num[ord(c) - ord("a")] += 1 # ord gets the asscii value
+            lst_group_anagrams[tuple(lst_alphabet_pos_num)].append(s)
+        return lst_group_anagrams.values()
 
 if __name__ == '__main__':
     lst_strings = ["ant","tan","cat","tac"]

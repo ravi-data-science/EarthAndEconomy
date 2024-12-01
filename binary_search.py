@@ -7,9 +7,6 @@ def search(nums: List[int], target: int) -> int:
     print(nums)
     l, r = 0, len(nums) - 1
 
-    for i in range(nums):
-        print(i)
-
     while l <= r:
         m = l + ((r - l) // 2)  # (l + r) // 2 can lead to overflow
         if nums[m] > target:
